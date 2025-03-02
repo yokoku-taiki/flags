@@ -1,4 +1,4 @@
-const socket = new WebSocket("ws://localhost:3000");
+const socket = new WebSocket("ws:https://silver-watery-okra.glitch.me");
 
 let gameState = {
   players: {},
@@ -59,7 +59,7 @@ function updateGameUI() {
     return;
   }
 
-  let flagSrc = `http://localhost:3000/flags/${gameState.currentCountry}.jpg`;
+  let flagSrc = `/flags/${gameState.currentCountry}.jpg`;
   console.log("🖼 画像のパス：", flagSrc);
 
   flagImage.src = flagSrc;
