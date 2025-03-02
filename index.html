@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>国旗クイズ（リアルタイム早押し対戦）</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>国旗早押シッ！</h1>
+
+    <!-- プレイヤー名入力 -->
+    <div id="loginForm">
+      <input type="text" id="playerName" placeholder="プレイヤー名を入力" />
+      <button id="joinGame">ゲームに参加</button>
+    </div>
+
+    <!-- ゲーム画面 -->
+    <div id="gameContainer" style="display: none">
+      <img id="flagImage" src="" alt="国旗" />
+      <p id="countryName" style="display: none"></p>
+
+      <p>
+        <strong>解答権獲得者:</strong>
+        <span id="activePlayer">まだ決まっていません</span>
+      </p>
+
+      <!-- 早押しボタン（各プレイヤーごとに表示） -->
+      <button id="playerButton" style="display: none">早押し</button>
+
+      <!-- 答えボタン -->
+      <div class="answer-buttons">
+        <button id="showAnswer" disabled>答えを見る</button>
+        <button id="correctButton" disabled>✅ 正解</button>
+        <button id="wrongButton" disabled>❌ 不正解</button>
+      </div>
+
+      <!-- スコアボード -->
+      <div id="scoreBoard"></div>
+    </div>
+
+    <script src="game.js"></script>
+  </body>
+</html>
